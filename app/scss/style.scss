@@ -2,6 +2,7 @@
 @import 'fonts';
 @import 'reset';
 @import 'global';
+@import 'libs';
 
 .header {
     padding: 40px 0;
@@ -25,7 +26,7 @@
     &__list-link {
         color: $title;
         @extend %quicksand-400;
-        padding-bottom: 2px;
+        padding: 0 2px 1px;
         transition: all .3s;
 
         &:hover {
@@ -67,13 +68,19 @@
     }
 }
 
+
+
 .main {
     flex-grow: 1;
 }
 
+
+
+
+
 .footer {
     flex-shrink: 0;
-    background-color: #f6f6f6;
+    background-color: $bg;
 
     &__logo {
         display: block;
@@ -117,14 +124,17 @@
         align-items: center;
         margin-top: 30px;
     }
-    &__social-link{
+
+    &__social-link {
         transition: all .3s;
-        path{
+
+        path {
             fill: $default;
         }
-        &:hover{
-            path{
-                fill: $accent; 
+
+        &:hover {
+            path {
+                fill: $accent;
             }
         }
     }
@@ -187,6 +197,7 @@
 
 
 
+
 .footer-bottom {
     padding: 27px 0;
     display: flex;
@@ -204,6 +215,86 @@
 }
 
 
+/*----------------slider------------------*/
+
+.slider {
+    padding-top: 65px;
+    padding-bottom: 45px;
+    background-color: $bg;
+    background-image: url(../images/slider/slider-bg.png);
+    background-repeat: no-repeat;
+    &__container {
+        max-width: 1520px;
+    }
+    &__item {
+        display: flex !important;
+        justify-content: space-between;
+        padding-left: 145px;
+    }
+    &__title {
+        padding-top: 197px;
+        @extend %roboto-700;
+        font-size: 58px;
+        line-height: 68px;
+        color: $title;
+        margin-bottom: 35px;
+        max-width: 670px;
+    }
+    &__text {
+        margin-bottom: 55px;
+        max-width: 470px;
+    }
+    &__btn {
+        @extend %btn;
+        padding: 14px 36px;
+        display: inline-block;
+    }
+
+    .slick-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: -70px;
+
+        li {
+            padding: 0 5px;
+
+            button {
+                border: none;
+                padding: 0;
+                background-color: transparent;
+                font-size: 0;
+                width: 26px;
+                height: 26px;
+                border-radius: 50%;
+                border: 1px solid transparent;
+                position: relative;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    width: 6px;
+                    height: 6px;
+                    border-radius: 50%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    background-color: $default;
+                }
+            }
+
+            &.slick-active {
+                button {
+                    border-color: $accent;
+
+                    &::before {
+                        background-color: $accent
+                    }
+                }
+
+            }
+        }
+    }
+}
 
 
 
