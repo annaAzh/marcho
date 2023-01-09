@@ -405,7 +405,10 @@
             .categories__item-subtitle {
                 color: $accent;
             }
-
+            .categories__link{
+                display: block;
+                max-width: 116px;
+            }
             .categories__link:hover {
                 color: $accent;
                 border-bottom: 1px solid $accent
@@ -455,6 +458,58 @@
         transition: all .3s;
     }
 
+}
+
+/*-------------------video-fashion-------------*/
+
+.video-fashion{
+    background-color: $bg;
+    background-image: url(../images/video-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 122px 0;
+    &__inner{
+        display: flex;
+    }
+    &__video{
+        
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: cover;
+        height: 465px;
+        max-width: 536px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 50px;
+    }
+    &__img{
+        text-align: center;
+    }
+    &__content{
+        max-width: 572px;
+        padding: 78px 0;
+    }
+    &__subtitle{
+        font-size: 22px;
+        line-height: 26px;
+        color: $accent;
+        @extend %quicksand-500;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+    &__title{
+        text-align: left;
+        margin-bottom: 40px;
+    }
+    &__text{
+        margin-bottom: 52px;
+        text-align: left;
+    }
+    &__link{
+        @extend %btn;
+    }
 }
 
 
