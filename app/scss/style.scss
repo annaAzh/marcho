@@ -514,14 +514,71 @@
 
 
 
+/*----------------------products-----------------*/
+
+
+.product{
+    padding: 110px 0 118px;
+    &__text{
+        margin-bottom: 58px;
+    }
+   
+    
+}
+
+.product-item{
+    max-width: 370px;
+    &__img-box{
+        height: 370px;
+        position: relative;
+        display: block;
+        z-index: -10;
+    }
+    &__link-box{
+        position: absolute;
+        width: 220px;
+        height: 50px;
+        background-color: #fff;
+        border-radius: 25px;
+        bottom: 50px;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        display: inline-block;
+        z-index: 12;
+    }
+    &__img{
+        object-fit: cover;
+    }
+    // &__text-content{
+    //     text-align: center;
+    // }
+    &__title{
+        @extend %roboto-400;
+        font-size: 26px;
+        color: $title;
+        margin-bottom: 15px;
+    }
+    &__price{
+        display: flex;
+        justify-content: center;
+    }
+    &__new-price{
+        @extend %roboto-500;
+        color: $title;
+        margin-right: 22px;
+
+    }
+    &__old-price{
+        @extend %roboto-400;
+        color: $default;
+        text-decoration: line-through;
+    }
+}
 
 
 
-
-
-
-
-
+  
 
 
 
