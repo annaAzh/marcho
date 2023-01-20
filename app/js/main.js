@@ -1,3 +1,5 @@
+
+
 $(function(){
 /*-------------------slider------------*/
 
@@ -67,3 +69,4 @@ function getTimeRemaining(endtime) {
 
 
 });
+
