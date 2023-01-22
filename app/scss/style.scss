@@ -169,7 +169,6 @@
         margin-bottom: 38px;
     &:last-of-type{
         margin-bottom: 20px;
-
     }
     
     }
@@ -195,7 +194,9 @@
         cursor: pointer;
         margin-bottom: 20px;
     }
-
+    &__text{
+        margin-bottom: 28px;
+    }
     &__forgot {
         color: $accent;
     }
