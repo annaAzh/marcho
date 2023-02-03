@@ -17,7 +17,7 @@ body {
 .title{
     font-size: 48px;
     line-height: 65px;
-    @extend %roboto-700;
+    @extend %roboto-400;
     color: $title;
     text-align: center;
     margin: 0 auto;
@@ -33,6 +33,7 @@ body {
 .top {
     &__container {
         max-width: 1700px;
+        margin: 0 auto;
         background-repeat: no-repeat;
         background-position: top center;
         padding: 130px 0 140px;
@@ -100,4 +101,51 @@ body {
 
 .header-404-page{
     background-color: $bg;
+}
+
+/*---------------pagination-----------*/
+
+.pagination{
+    padding: 36px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__list{
+        display: flex;
+        margin-right: 30px;
+        margin-left: 30px;
+    }
+    &__item{
+        padding: 0 10px;
+    }
+    &__link--active{
+        color: $accent;
+    }
+    &__arrows{
+        position: relative;
+        text-transform: uppercase;
+    }
+    &-prev{
+        padding-left: 15px;
+    }
+    &-next{
+        padding-right: 15px;
+    }
+    &-prev::before,
+    &-next::before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        width: 5px;
+        height: 10px;
+        background-repeat: no-repeat;
+    }
+    &-prev::before{
+        background-image: url(../images/icons/angle_left.svg); 
+        left: 0; 
+    }
+    &-next::before{
+        background-image: url(../images/icons/angle_next.svg);
+        right: 0;
+    }  
 }
