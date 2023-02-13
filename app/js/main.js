@@ -7,6 +7,7 @@ $(function(){
   $('.shop-content__filter-btn').on('click', function(){
     $('.shop-content__filter-btn').removeClass('shop-content__filter-btn--active');
     $(this).addClass('shop-content__filter-btn--active');
+    
   });
 
 
@@ -20,9 +21,22 @@ $('.filter-grid').on('click', function() {
   $('.product-item').removeClass('product-item--list');
 });
 
+/*-------------tabs--------------*/
+
+$('.details-tabs__top-item').on('click', function(e){
+  e.preventDefault();
+  $('.details-tabs__top-item').removeClass('details-tabs__top-item--active');
+  $(this).addClass('details-tabs__top-item--active');
+
+  $('.details-tabs__content-item').removeClass('details-tabs__content-item--active');
+  $($(this).attr('href')).addClass('details-tabs__content-item--active');
+});
+
+
 /*---------------form styler-----------------*/
 
-$('.select-style').styler();
+$('.select-style, .details-item__num').styler();
+
 
   /*-----------ion rangeslider(filter)-------------------*/
 
@@ -51,8 +65,24 @@ $('.select-style').styler();
       autoplaySpeed: 2000,
   })
 
+/*-------------------slider-details------------*/
+$('.details-slide__big').slick({
+  arrows: false,
+  fade: true,
+  asNavFor: '.details-slide__thumb',
+  draggable: true
+});
+$('.details-slide__thumb').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.details-slide__big',
+  focusOnSelect: true,
+  vertical: true,
+  draggable: true
+});
+
  /*-----------rating stars---------------*/
- $('.product-item__stars').rateYo({
+ $('.product-item__stars, .details-item__stars').rateYo({
    // rating: 3.6,
    starWidth: "20px",
    normalFill: "#ccccce",
@@ -62,6 +92,17 @@ $('.select-style').styler();
    '<path d="M6.01212 0.927074C6.31142 0.00575399 7.61482 0.00575399 7.91422 0.927074L8.80132 3.65735C8.93512 4.06937 9.31912 4.34834 9.75232 4.34834H12.6231C13.5918 4.34834 13.9946 5.58794 13.2109 6.15735L10.8883 7.84482C10.5379 8.09943 10.3912 8.55083 10.5251 8.96283L11.4122 11.6932C11.7115 12.6145 10.657 13.3806 9.87332 12.8112L7.55092 11.1238C7.20042 10.8691 6.72582 10.8691 6.37532 11.1238L4.05292 12.8112C3.26922 13.3806 2.21472 12.6145 2.51402 11.6932L3.40122 8.96283C3.53502 8.55083 3.38842 8.09943 3.03792 7.84482L0.715323 6.15734C-0.0683767 5.58794 0.334424 4.34834 1.30312 4.34834H4.17392C4.60712 4.34834 4.99112 4.06937 5.12502 3.65735L6.01212 0.927074Z"></path>'+
    '</svg>'
   })
+
+// /*----------stars----------------*/
+
+// $('.comment-form__radio').on('click', function(){
+//   this.style.fill = '#8d8d8d';
+// });
+  
+
+
+
+
   /*----------countdown timer----------------*/
   function getTimeRemaining(endtime) {
     const total = Date.parse(endtime) - Date.parse(new Date());
