@@ -290,6 +290,10 @@
         border: none;
         cursor: pointer;
         box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+        transition: all .3s;
+            &:hover{
+                @extend %btn-hover;
+            }
     }
 }
 
@@ -351,6 +355,10 @@
         @extend %btn;
         padding: 14px 36px;
         display: inline-block;
+        transition: all .3s;
+            &:hover{
+                @extend %btn-hover;
+            }
     }
 
     .slick-dots {
@@ -859,6 +867,10 @@
             @extend %btn;
             padding: 8px 10px;
             line-height: 1;
+            transition: all .3s;
+            &:hover{
+                @extend %btn-hover;
+            }
         }
     }
 
@@ -1155,6 +1167,10 @@
             @extend %btn;
             padding: 12px 20px;
             letter-spacing: .2vw;
+            transition: all .3s;
+            &:hover{
+                @extend %btn-hover;
+            }
         }
     }
 
@@ -1540,6 +1556,10 @@
         @extend %btn;
         padding: 14px 38px;
         text-transform: none;
+        transition: all .3s;
+            &:hover{
+                @extend %btn-hover;
+            }
     }
 }
 
@@ -1928,7 +1948,8 @@
                 height: 50px;
                 border: 1px solid #efefef;
                 padding: 16px 10px 16px 18px;
-                & + .comment-form__textbox-input{
+
+                &+.comment-form__textbox-input {
                     margin-left: 30px;
                 }
             }
@@ -1948,6 +1969,10 @@
             @extend %btn;
             padding: 16px 36px;
             margin-bottom: 56px;
+            transition: all .3s;
+            &:hover{
+                @extend %btn-hover;
+            }
         }
     }
 
@@ -2002,7 +2027,8 @@
     &__item {
         margin-bottom: 60px;
     }
-    &__item-video{
+
+    &__item-video {
         background-repeat: no-repeat;
         background-position: center center;
         background-size: cover;
@@ -2050,10 +2076,12 @@
         padding-top: 36px;
         box-shadow: 0px 20px 60px 0px rgba(202, 202, 202, 0.35);
     }
-    &__slider{
+
+    &__slider {
         position: relative;
+
         .slick-prev,
-        .slick-next{
+        .slick-next {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
@@ -2063,24 +2091,29 @@
             background-color: $accent;
             border: none;
             border-radius: 50%;
-            path{
+
+            path {
                 fill: #fff;
             }
         }
-        .slick-prev{
+
+        .slick-prev {
             left: 40px;
         }
-        .slick-next{
-            right: 40px;    
+
+        .slick-next {
+            right: 40px;
         }
-        .slick-disabled{
+
+        .slick-disabled {
             background-color: #fff;
             box-shadow: 0px 7px 20px 0px rgba(168, 168, 168, 0.3);
-            path{
+
+            path {
                 fill: $accent;
             }
         }
-    }     
+    }
 }
 
 .person {
@@ -2139,43 +2172,50 @@
 
 }
 
-.post{
+.post {
     padding: 38px 32px 36px;
     margin-bottom: 40px;
     border: 1px solid #ececec;
-    &__title{
+
+    &__title {
         font-size: 22px;
         color: $title;
         text-transform: uppercase;
         margin-bottom: 12px;
     }
-    &__item{
+
+    &__item {
         padding: 18px 0;
         display: flex;
-        &-img{
+
+        &-img {
             min-width: 80px;
             height: 80px;
             object-fit: cover;
             margin-right: 16px;
         }
-        &-title{
+
+        &-title {
             @extend %roboto-400;
             font-size: 18px;
             line-height: 28px;
             margin-bottom: 5px;
             color: $title;
-            &:hover{
+
+            &:hover {
                 color: $accent;
             }
         }
-        &-date{
+
+        &-date {
             @extend %roboto-400;
             font-size: 16px;
             line-height: 28px;
             color: $default;
             padding-left: 25px;
             position: relative;
-            &::before{
+
+            &::before {
                 content: '';
                 position: absolute;
                 top: 6px;
@@ -2185,23 +2225,26 @@
                 background-image: url(../images/icons/calendar.svg);
             }
         }
-        & + .post__item{
+
+        &+.post__item {
             border-top: 1px solid #ececec;
         }
-       
+
     }
 }
 
 
-.blog-page__box{
-    p{
+.blog-page__box {
+    p {
         margin-bottom: 30px;
     }
-    img{
+
+    img {
         margin-right: 30px;
         float: left;
     }
-    blockquote{
+
+    blockquote {
         background-color: $bg;
         @extend %roboto-400;
         font-size: 22px;
@@ -2211,24 +2254,28 @@
         padding: 40px;
         margin-bottom: 30px;
     }
-    h4{
+
+    h4 {
         margin-bottom: 30px;
         color: $title;
         font-size: 22px;
         @extend %roboto-400;
     }
 }
-.blog-page{
-    &__info{
+
+.blog-page {
+    &__info {
         display: flex;
         align-items: center;
         margin-bottom: 26px;
     }
-    &__item{
+
+    &__item {
         position: relative;
         padding-left: 26px;
         margin-right: 28px;
-        &::before{
+
+        &::before {
             content: '';
             position: absolute;
             width: 16px;
@@ -2237,25 +2284,31 @@
             left: 0;
             background-repeat: no-repeat;
         }
-        
+
     }
-    &__data::before{
+
+    &__data::before {
         background-image: url(../images/icons/calendar.svg);
     }
-    &__comments::before{
+
+    &__comments::before {
         background-image: url(../images/icons/comment.svg);
     }
-    &__user::before{
+
+    &__user::before {
         background-image: url(../images/icons/red-user.svg);
     }
-    &__user{
+
+    &__user {
         display: flex;
         padding: 40px 0;
         border-bottom: 1px solid #ececec;
-        &-img{
+
+        &-img {
             margin-right: 30px;
         }
-        &-name{
+
+        &-name {
             margin-bottom: 24px;
             @extend %roboto-400;
             font-size: 22px;
@@ -2264,56 +2317,192 @@
             color: $title;
         }
     }
-    &__links{
+
+    &__links {
         display: flex;
         justify-content: space-between;
-        & span{
+
+        & span {
             color: $title;
             text-transform: uppercase;
             margin-right: 8px;
         }
     }
-    &.blog-one{
+
+    &.blog-one {
         margin-bottom: 0;
     }
-    &__social{
+
+    &__social {
         display: flex;
         line-height: 1;
-        &-link +.blog-page__social-link{
+
+        &-link+.blog-page__social-link {
             margin-left: 13px;
         }
-        &-link{
-            path{
+
+        &-link {
+            path {
                 fill: $default;
                 transition: all .3s;
             }
-            &:hover{
-                path{
+
+            &:hover {
+                path {
                     fill: $accent;
                 }
             }
         }
     }
-    &__tags-link{
+
+    &__tags-link {
         transition: all .3s;
-        &:hover{
+
+        &:hover {
             color: $accent;
         }
     }
 
-   
+
 }
-    .comment__blog-page-title {
+
+.comment__blog-page-title {
+    @extend %roboto-700;
+    font-size: 24px;
+    line-height: 26px;
+    color: $title;
+    margin-bottom: 22px;
+}
+
+.details__tabs-items.blog-page__comments {
+    padding-bottom: 38px;
+    border-bottom: 1px solid #ececec;
+}
+
+.map {
+    padding: 120px 0;
+}
+
+#map {
+    width: 100%;
+    height: 450px;
+}
+
+.contacts {
+    padding-bottom: 120px;
+
+    &__inner {
+        display: flex;
+        align-items: center;
+    }
+
+    &__info {
+        margin-right: 30px;
+        max-width: 370px;
+    }
+
+    &__title {
         @extend %roboto-700;
-        font-size: 24px;
-        line-height: 26px;
+        font-size: 48px;
+        line-height: 58px;
         color: $title;
-        margin-bottom: 22px;
+        margin-bottom: 26px;
     }
-    .details__tabs-items.blog-page__comments{
-        padding-bottom: 38px;
-        border-bottom: 1px solid #ececec;
+
+    &__text {
+        margin-bottom: 48px;
     }
+
+    &__item+.contacts__item {
+        margin-top: 32px;
+    }
+
+    &__item {
+        padding-left: 76px;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 60px;
+            height: 60px;
+            background-color: #fff;
+            box-shadow: 0px 5px 20px 0px rgba(146, 146, 146, 0.3);
+            background-position: center center;
+            background-repeat: no-repeat; 
+        }   
+        a {
+            display: block;
+        }
+    }
+    &__tel::before{
+        background-image: url(../images//contacts/tel.svg);        
+    }
+    &__address::before{
+        background-image: url(../images//contacts/location.svg);        
+    }
+    &__email::before{
+        background-image: url(../images//contacts/envelope.svg);        
+    }
+    &__form-box{
+        box-shadow: 0px 10px 40px 0px rgba(172, 172, 172, 0.3);
+        width: 100%;
+    }
+    &__form {
+        padding: 60px 40px 32px 40px;
+        &-title{
+            @extend %roboto-700;
+            font-size: 22px;
+            line-height: 58px;
+            color: $title;
+            margin-bottom: 25px;
+        }
+        &__textbox {
+            display: flex;
+            justify-content: space-between;
+            
+        }
+        &-input {
+                display: inline-block;
+                background-color: $bg;
+                width: 100%;
+                height: 58px;
+                border: none;
+                padding: 18px 10px 18px 24px;
+                margin-bottom: 28px;
+
+                &+.contacts__form-input {
+                    margin-left: 30px;
+                }
+           
+        }
+        &__textarea {
+            display: block;
+            width: 100%;
+            height: 200px;
+            margin-bottom: 28px;
+            resize: none;
+            background-color: $bg;
+            border: none;
+            padding: 18px 10px 18px 24px;
+        }
+
+    &__btn {
+            @extend %btn;
+            padding: 20px 40px;
+            margin-bottom: 28px;
+            transition: all .3s;
+            &:hover{
+                @extend %btn-hover;
+            }
+        }
+    }
+}
+
+
+  
+  
 
 
 @import 'media';

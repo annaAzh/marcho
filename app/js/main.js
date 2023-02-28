@@ -2,6 +2,8 @@
 
 $(function(){
 
+
+
   /*--------------view button---------------------*/
 
   $('.shop-content__filter-btn').on('click', function(){
@@ -153,6 +155,9 @@ $('.details-slide__thumb').slick({
   //  const deadline = new Date(Date.parse(new Date()) + 15 * 24 * 60 * 60 * 1000);
   const deadline =$('.deal__items').attr('data-time');
   initializeClock('deal__items', deadline);
+
+
+
 
 
 });
